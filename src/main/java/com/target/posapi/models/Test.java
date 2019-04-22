@@ -1,7 +1,9 @@
-package com.target.posapi.document;
+package com.target.posapi.models;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
+@Document(collection = "tests")
 public class Test {
 
     @Id

@@ -1,10 +1,11 @@
 package com.target.posapi.repository;
 
+import com.target.posapi.models.Order;
 import org.springframework.data.mongodb.repository.MongoRepository;
-import com.target.posapi.models.Item;
 import org.springframework.stereotype.Repository;
 
+
 @Repository
-public interface ItemRespository extends MongoRepository<Item, String> {
+public interface OrderRepository extends MongoRepository<Order, String > {
 
 }

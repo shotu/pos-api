@@ -1,4 +1,4 @@
-package com.target.posapi.document;
+package com.target.posapi.models;
 
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.format.annotation.DateTimeFormat.ISO;
@@ -7,17 +7,18 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.Date;
 
-@Document
+@Document(collection = "items")
 public class Item {
 
     @Id
     private String id;
     private String name;
     private String description;
-// store price as integer and as smallest unit count
+
+    // store price as integer and as smallest unit count
     private Integer price;
 
-//   for identifyig the cateogry of product
+    // for identifyig the cateogry of product
     private Integer categoryId;
 
     private String price_currency;

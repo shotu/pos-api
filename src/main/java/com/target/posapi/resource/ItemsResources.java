@@ -1,7 +1,7 @@
 package com.target.posapi.resource;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.target.posapi.document.Item;
+import com.target.posapi.models.Item;
 import com.target.posapi.repository.ItemRespository;
 import org.springframework.web.bind.annotation.*;
 
