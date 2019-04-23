@@ -5,5 +5,6 @@ import com.target.posapi.models.User;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface UserRespository extends MongoRepository<User, Integer> {
+public interface UserRepository extends MongoRepository<User, String> {
+    User findByEmail(String email);
 }

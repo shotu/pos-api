@@ -1,24 +1,25 @@
 package com.target.posapi.resource;
 
 
-import com.target.posapi.repository.UserRespository;
+import com.target.posapi.repository.UserRepository;
 import org.springframework.web.bind.annotation.*;
 import com.target.posapi.models.User;
 import java.util.List;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/pos/api/users")
 public class UsersResources {
 
-    private UserRespository userRespository;
+    private UserRepository userRepository;
 
-    public UsersResources(UserRespository userRespository){
-        this.userRespository = userRespository;
+    public UsersResources(UserRepository userRepository){
+        this.userRepository = userRepository;
     }
 
     @GetMapping("/all")
     public List<User> getAll(){
-        return userRespository.findAll();
+        return userRepository.findAll();
     }
 
     @DeleteMapping
